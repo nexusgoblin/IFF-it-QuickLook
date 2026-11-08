@@ -677,7 +677,7 @@ enum ILBMParser {
 
     private static func createCGImage(pixels: [UInt8], width: Int, height: Int) throws -> CGImage {
         let shouldHDouble = (Double(width)/Double(height) < 1.0)
-        let shouldVDouble = (Double(width)/Double(height) > 1.9)
+        let shouldVDouble = (Double(width)/Double(height) > 2.0)
         let bytesPerRow = (shouldHDouble ? width * 8 : width * 4)
         let colorSpace = CGColorSpaceCreateDeviceRGB()
         let bitmapInfo = CGBitmapInfo(rawValue: CGImageAlphaInfo.premultipliedLast.rawValue)
